@@ -1,0 +1,10 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: var(--hero-background);
+
+  transition: background-color 300ms ease;
+}

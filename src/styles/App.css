@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+  background-color: var(--color-stone-950);
+  color: var(--color-stone-50);
+}
+
+a {
+  color: var(--color-stone-950);
+}
