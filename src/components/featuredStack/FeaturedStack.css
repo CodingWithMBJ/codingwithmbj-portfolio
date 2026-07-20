@@ -32,9 +32,7 @@
   cursor: default;
 }
 
-/* =====================================================
-   Full-screen stack sides
-===================================================== */
+
 
 .stack-side {
   --side-strength: 0;
@@ -70,9 +68,7 @@
   -webkit-clip-path: inset(0 0 0 calc(100% - var(--frontend-reveal)));
 }
 
-/* =====================================================
-   Background surfaces
-===================================================== */
+
 
 .stack-side__surface {
   position: absolute;
@@ -124,7 +120,7 @@
   -webkit-mask-image: radial-gradient(circle at center, black, transparent 78%);
 }
 
-/* Cursor-responsive light */
+
 
 .stack-side__surface::before {
   position: absolute;
@@ -144,9 +140,7 @@
   pointer-events: none;
 }
 
-/* =====================================================
-   Background technologies
-===================================================== */
+
 
 .stack-side__technologies {
   position: absolute;
@@ -193,10 +187,7 @@
   font-size: clamp(1.2rem, 2.2vw, 2rem);
 }
 
-/*
- * The different nth-child values create a subtle depth variation.
- * They do not change your manually assigned top and left positions.
- */
+
 
 .stack-side__technology:nth-child(4n + 1) {
   transform: translate3d(0, calc((1 - var(--side-strength)) * 11px), 0)
@@ -216,9 +207,7 @@
     rotate(var(--technology-rotation));
 }
 
-/* =====================================================
-   Stack title and description
-===================================================== */
+
 
 .stack-side__content {
   position: absolute;
@@ -283,9 +272,7 @@
   margin-left: auto;
 }
 
-/* =====================================================
-   Transparent center intro
-===================================================== */
+
 
 .stack-intro {
   position: absolute;
@@ -343,7 +330,7 @@
   letter-spacing: -0.08em;
 
   color: var(--intro-heading);
-
+  text-transform: uppercase;
   text-shadow: 0 0 40px var(--intro-text-shadow);
 }
 
@@ -366,9 +353,7 @@
   color: var(--intro-muted-text);
 }
 
-/* =====================================================
-   Side directions
-===================================================== */
+
 
 .stack-intro__directions {
   position: absolute;
@@ -401,9 +386,7 @@
   display: none;
 }
 
-/* =====================================================
-   Modal
-===================================================== */
+
 
 .stack-modal {
   position: fixed;
@@ -496,9 +479,7 @@
   text-align: center;
 }
 
-/* =====================================================
-   Mobile
-===================================================== */
+
 
 @media (max-width: 700px) {
   .featured-stack__stage {
@@ -526,8 +507,7 @@
 
   .stack-intro__content {
     width: 100%;
-    /* 
-    text-align: left; */
+    
   }
 
   .stack-intro__name {
@@ -576,9 +556,7 @@
   }
 }
 
-/* =====================================================
-   Reduced motion
-===================================================== */
+
 
 @media (prefers-reduced-motion: reduce) {
   .stack-side__surface,
