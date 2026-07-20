@@ -1,22 +1,52 @@
-import { Link } from "react-router-dom";
-import { navigation } from "../../data/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Navigation = () => {
+import { navigation } from "../../data/navigation";
+
+import "./Navigation.css";
+
+interface NavigationProps {
+  closeMenu?: () => void;
+}
+
+const Navigation = ({ closeMenu }: NavigationProps) => {
+  const handleNavigation = (section?: string, path?: string) => {
+    closeMenu?.();
+
+    if (section) {
+      const targetSection = document.getElementById(section);
+
+      if (!targetSection) {
+        return;
+      }
+
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+      window.history.replaceState(null, "", `#${section}`);
+      return;
+    }
+
+    if (path) {
+      window.location.assign(path);
+    }
+  };
+
   return (
-    <nav className="nav flex items-center w-full h-full">
-      <ul className="nav-ul flex items-center w-full h-full">
+    <nav className="navigation" aria-label="Primary navigation">
+      <ul className="navigation__list">
         {navigation.map((item) => (
-          <li className="nav-li">
-            <Link
-              to={`${item.section ? "#" : "/"}${item.section || item.path}`}
-              className={`inline-block px-3`}
+          <li key={item.id} className="navigation__item">
+            <button
+              type="button"
+              className="navigation__link"
+              onClick={() => handleNavigation(item.section, item.path)}
+              aria-label={item.name}
+              title={item.name}
             >
-              <FontAwesomeIcon
-                icon={item.icon}
-                className="text-xl hover:text-sky-600 "
-              />
-            </Link>
+              <FontAwesomeIcon icon={item.icon} />
+            </button>
           </li>
         ))}
       </ul>
