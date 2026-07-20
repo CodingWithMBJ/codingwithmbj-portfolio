@@ -5,7 +5,7 @@ import {
   backendStack,
   frontendStack,
   type StackCategory,
-} from "../../data/featuredStack";
+} from "../data/featuredStack";
 
 interface StackModalProps {
   stackCategory: StackCategory | null;

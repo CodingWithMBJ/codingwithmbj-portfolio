@@ -1,39 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 
-import type { Theme } from "../types/theme.types";
-
-const THEME_STORAGE_KEY = "portfolio-theme";
-
-const getSystemTheme = (): Theme => {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-};
-
-const getInitialTheme = (): Theme => {
-  const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-
-  if (storedTheme === "light" || storedTheme === "dark") {
-    return storedTheme;
-  }
-
-  return getSystemTheme();
-};
+import { ThemeContext } from "../context/ThemeContext";
 
 export const useTheme = () => {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const context = useContext(ThemeContext);
 
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem(THEME_STORAGE_KEY, theme);
-  }, [theme]);
+  if (!context) {
+    throw new Error("useTheme must be used inside ThemeProvider");
+  }
 
-  const toggleTheme = () => {
-    setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
-  };
-
-  return {
-    theme,
-    toggleTheme,
-  };
+  return context;
 };

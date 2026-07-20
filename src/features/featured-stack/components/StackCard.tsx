@@ -1,9 +1,6 @@
 import type { CSSProperties } from "react";
 
-import type {
-  FeaturedStackData,
-  StackCategory,
-} from "../../data/featuredStack";
+import type { FeaturedStackData, StackCategory } from "../data/featuredStack";
 
 interface StackCardProps {
   stack: FeaturedStackData;

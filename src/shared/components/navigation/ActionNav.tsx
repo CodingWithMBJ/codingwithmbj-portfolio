@@ -1,5 +1,5 @@
-import Navigation from "../nav/Navigation";
-import ThemeToggle from "../../shared/components/theme-toggle/ThemeToggle";
+import ThemeToggle from "../theme-toggle/ThemeToggle";
+import Navigation from "./Navigation";
 
 import "./ActionNav.css";
 

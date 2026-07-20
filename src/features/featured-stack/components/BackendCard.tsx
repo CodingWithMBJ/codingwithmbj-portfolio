@@ -1,4 +1,4 @@
-import { backendStack, type StackCategory } from "../../data/featuredStack";
+import { backendStack, type StackCategory } from "../data/featuredStack";
 
 import StackCard from "./StackCard";
 

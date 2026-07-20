@@ -1,4 +1,4 @@
-import type { StackCategory } from "../../data/featuredStack";
+import type { StackCategory } from "../data/featuredStack";
 
 interface IntroCardProps {
   activeStack: StackCategory | null;

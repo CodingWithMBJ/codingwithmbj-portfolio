@@ -7,14 +7,14 @@ import {
   type PointerEvent,
 } from "react";
 
-import BackendCard from "../cards/BackendCard";
-import FrontendCard from "../cards/FrontendCard";
-import IntroCard from "../cards/IntroCard";
+import BackendCard from "./BackendCard";
+import FrontendCard from "./FrontendCard";
+import IntroCard from "./IntroCard";
 import StackModal from "./StackModal";
 
-import type { StackCategory } from "../../data/featuredStack";
+import type { StackCategory } from "../data/featuredStack";
 
-import "./FeaturedStack.css";
+import "../styles/FeaturedStack.css";
 
 type FeaturedStackStyles = CSSProperties & {
   "--hover-progress": number;

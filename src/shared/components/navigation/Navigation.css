@@ -1,14 +1,29 @@
-.theme-toggle {
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.navigation__item {
+  display: flex;
+}
+
+.navigation__link {
   display: grid;
   width: 2.5rem;
   height: 2.5rem;
-  flex-shrink: 0;
   padding: 0;
   place-items: center;
   border: 0;
   border-radius: var(--radius-md);
   background: transparent;
   color: var(--nav-text);
+  font-size: 1.05rem;
   cursor: pointer;
   transition:
     background-color var(--transition-fast),
@@ -16,16 +31,16 @@
     transform var(--transition-fast);
 }
 
-.theme-toggle:hover {
+.navigation__link:hover {
   background: var(--intro-button-surface);
   color: var(--nav-hover);
 }
 
-.theme-toggle:active {
+.navigation__link:active {
   transform: scale(0.94);
 }
 
-.theme-toggle:focus-visible {
+.navigation__link:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }

@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { navigation } from "../../data/navigation";
+import { navigation } from "./navigation.data";
 
 import "./Navigation.css";
 
