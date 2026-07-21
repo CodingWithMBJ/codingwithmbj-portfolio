@@ -3,24 +3,38 @@
   bottom: max(0.75rem, env(safe-area-inset-bottom));
   left: 50%;
   z-index: 50;
+
   display: flex;
   width: max-content;
   max-width: calc(100vw - 2rem);
   min-height: 3.25rem;
   padding: 0.35rem;
+
   align-items: center;
   gap: 0.25rem;
+
   border: var(--glass-border);
   border-radius: var(--radius-lg);
+
   background: var(--nav-surface);
   box-shadow: var(--shadow-md);
+
   backdrop-filter: blur(18px);
-  transform: translateX(-50%);
+  -webkit-backdrop-filter: blur(18px);
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateX(-50%) translateY(0);
+
   transition:
+    opacity 250ms ease,
+    visibility 250ms ease,
+    transform 250ms ease,
     background-color var(--transition-theme),
     border-color var(--transition-theme),
     box-shadow var(--transition-theme);
-  -webkit-backdrop-filter: blur(18px);
 }
 
 .action-nav__divider {
@@ -30,8 +44,44 @@
   background: var(--color-border-muted);
 }
 
+/*
+ * Mobile and tablet:
+ * always show the nav, regardless of whether the
+ * hero is visible.
+ */
+.action-nav--hidden,
+.action-nav--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/*
+ * Desktop:
+ * hide the nav only while the hero is visible.
+ */
 @media (min-width: 1024px) {
+  .action-nav--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(1.5rem);
+  }
+
+  .action-nav--visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
   .action-nav {
-    display: none;
+    transition:
+      background-color var(--transition-theme),
+      border-color var(--transition-theme),
+      box-shadow var(--transition-theme);
   }
 }

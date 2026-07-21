@@ -9,7 +9,7 @@ export const contactLinks: ContactLink[] = [
     id: "email",
     label: "Email",
     value: "Send me an email",
-    href: "mailto:YOUR_EMAIL@example.com",
+    href: "mailto:codingwithmbj@gmail.com",
     icon: faEnvelope,
   },
   {
