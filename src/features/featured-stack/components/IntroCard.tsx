@@ -46,11 +46,11 @@ const IntroCard = ({ activeStack, openModal }: IntroCardProps) => {
 
       <div className="stack-intro__mobile-actions">
         <button type="button" onClick={() => openModal("backend")}>
-          Explore Backend
+          View Backend Stack
         </button>
 
         <button type="button" onClick={() => openModal("frontend")}>
-          Explore Frontend
+          View Frontend Stack
         </button>
       </div>
     </div>

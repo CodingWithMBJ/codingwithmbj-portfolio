@@ -32,8 +32,6 @@
   cursor: default;
 }
 
-
-
 .stack-side {
   --side-strength: 0;
   --side-direction: 0;
@@ -67,8 +65,6 @@
 
   -webkit-clip-path: inset(0 0 0 calc(100% - var(--frontend-reveal)));
 }
-
-
 
 .stack-side__surface {
   position: absolute;
@@ -120,8 +116,6 @@
   -webkit-mask-image: radial-gradient(circle at center, black, transparent 78%);
 }
 
-
-
 .stack-side__surface::before {
   position: absolute;
   inset: 0;
@@ -139,8 +133,6 @@
 
   pointer-events: none;
 }
-
-
 
 .stack-side__technologies {
   position: absolute;
@@ -187,8 +179,6 @@
   font-size: clamp(1.2rem, 2.2vw, 2rem);
 }
 
-
-
 .stack-side__technology:nth-child(4n + 1) {
   transform: translate3d(0, calc((1 - var(--side-strength)) * 11px), 0)
     scale(calc(0.96 + var(--side-strength) * 0.04))
@@ -206,8 +196,6 @@
     scale(calc(0.95 + var(--side-strength) * 0.05))
     rotate(var(--technology-rotation));
 }
-
-
 
 .stack-side__content {
   position: absolute;
@@ -246,7 +234,7 @@
 .stack-side__title {
   margin: 0;
 
-  font-size: clamp(3.5rem, 8vw, 5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 650;
   line-height: 0.82;
   letter-spacing: -0.085em;
@@ -263,7 +251,7 @@
   font-size: clamp(1rem, 1.45vw, 1.2rem);
   line-height: 1.75;
 
-  color: var(--stack-muted-text);
+  color: var(--stack-heading);
 
   opacity: calc(var(--side-strength) * var(--side-strength));
 }
@@ -271,8 +259,6 @@
 .stack-side--frontend .stack-side__description {
   margin-left: auto;
 }
-
-
 
 .stack-intro {
   position: absolute;
@@ -324,13 +310,13 @@
 .stack-intro__name {
   margin: 0;
 
-  font-size: clamp(3.4rem, 8vw, 5rem);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 650;
   line-height: 0.88;
   letter-spacing: -0.08em;
 
   color: var(--intro-heading);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-shadow: 0 0 40px var(--intro-text-shadow);
 }
 
@@ -352,8 +338,6 @@
 
   color: var(--intro-muted-text);
 }
-
-
 
 .stack-intro__directions {
   position: absolute;
@@ -385,8 +369,6 @@
 .stack-intro__mobile-actions {
   display: none;
 }
-
-
 
 .stack-modal {
   position: fixed;
@@ -479,8 +461,6 @@
   text-align: center;
 }
 
-
-
 @media (max-width: 700px) {
   .featured-stack__stage {
     min-height: 100dvh;
@@ -507,11 +487,10 @@
 
   .stack-intro__content {
     width: 100%;
-    
   }
 
   .stack-intro__name {
-    font-size: clamp(3.25rem, 5vw, 5.5rem);
+    font-size: clamp(2rem, 5vw, 3rem);
   }
 
   .stack-intro__description {
@@ -555,8 +534,6 @@
     grid-template-columns: 1fr;
   }
 }
-
-
 
 @media (prefers-reduced-motion: reduce) {
   .stack-side__surface,

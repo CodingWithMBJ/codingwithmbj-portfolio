@@ -1,0 +1,8 @@
+.home-page {
+  width: 100%;
+  overflow-x: clip;
+}
+
+.home-page > section {
+  scroll-margin-top: 1rem;
+}

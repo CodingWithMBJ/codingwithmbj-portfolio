@@ -9,28 +9,21 @@ interface NavigationProps {
 }
 
 const Navigation = ({ closeMenu }: NavigationProps) => {
-  const handleNavigation = (section?: string, path?: string) => {
+  const handleNavigation = (section: string) => {
     closeMenu?.();
 
-    if (section) {
-      const targetSection = document.getElementById(section);
+    const targetSection = document.getElementById(section);
 
-      if (!targetSection) {
-        return;
-      }
-
-      targetSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-
-      window.history.replaceState(null, "", `#${section}`);
+    if (!targetSection) {
       return;
     }
 
-    if (path) {
-      window.location.assign(path);
-    }
+    targetSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    window.history.replaceState(null, "", `#${section}`);
   };
 
   return (
@@ -41,7 +34,7 @@ const Navigation = ({ closeMenu }: NavigationProps) => {
             <button
               type="button"
               className="navigation__link"
-              onClick={() => handleNavigation(item.section, item.path)}
+              onClick={() => handleNavigation(item.section)}
               aria-label={item.name}
               title={item.name}
             >
