@@ -30,7 +30,7 @@ const Contact = () => {
 
             <a
               className="contact-section__primary-action"
-              href="mailto:YOUR_EMAIL@example.com"
+              href="mailto:codingwithmbj@gmail.com"
             >
               Start a conversation
             </a>

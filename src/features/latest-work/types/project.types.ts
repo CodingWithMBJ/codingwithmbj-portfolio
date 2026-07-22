@@ -10,7 +10,7 @@ export interface Project {
   description: string;
   image: string;
   techStack: string[];
-  githubLink: string;
+  githubLink?: string;
   liveLink?: string;
   featured?: boolean;
 }

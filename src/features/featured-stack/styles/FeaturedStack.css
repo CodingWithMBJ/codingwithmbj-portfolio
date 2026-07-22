@@ -310,13 +310,13 @@
 .stack-intro__name {
   margin: 0;
 
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(3rem, 5vw, 3.5rem);
   font-weight: 650;
   line-height: 0.88;
   letter-spacing: -0.08em;
 
   color: var(--intro-heading);
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   text-shadow: 0 0 40px var(--intro-text-shadow);
 }
 

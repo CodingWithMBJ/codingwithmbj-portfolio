@@ -61,14 +61,18 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             </a>
           )}
 
-          <a
-            className="project-card__link"
-            href={project.githubLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            View code
-          </a>
+          {project.githubLink ? (
+            <a
+              className="project-card__link"
+              href={project.githubLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              View code
+            </a>
+          ) : (
+            <button className="project-card__link">Coming Soon</button>
+          )}
         </div>
       </div>
     </article>

@@ -1,3 +1,5 @@
+import "./SectionHeading.css";
+
 interface SectionHeadingProps {
   eyebrow: string;
   title: string;

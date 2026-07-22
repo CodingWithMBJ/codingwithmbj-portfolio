@@ -19,7 +19,7 @@ export const projects: Project[] = [
       "FastAPI",
       "PostgreSQL",
     ],
-    githubLink: "https://github.com/Coding-Temple-Tech-Residency/FinSight-B",
+    // githubLink: "https://github.com/Coding-Temple-Tech-Residency/FinSight-B",
     featured: true,
   },
   {
