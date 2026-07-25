@@ -1,0 +1,122 @@
+.projects-page {
+  min-height: 100vh;
+  padding: clamp(5rem, 10vw, 8rem) 1.25rem clamp(6rem, 10vw, 9rem);
+
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.projects-page__container {
+  width: min(100%, 80rem);
+  margin-inline: auto;
+}
+
+.projects-page__header {
+  display: grid;
+  margin-bottom: clamp(2.5rem, 7vw, 5rem);
+  gap: 2rem;
+}
+
+.projects-page__heading {
+  max-width: 48rem;
+}
+
+.projects-page__eyebrow {
+  margin: 0 0 0.75rem;
+
+  color: var(--color-accent);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.projects-page__title {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.projects-page__description {
+  max-width: 42rem;
+  margin: 1.5rem 0 0;
+
+  color: var(--color-text-muted);
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.7;
+}
+
+.projects-page__back {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--color-border-muted);
+  border-radius: var(--radius-md);
+
+  color: var(--color-text);
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.projects-page__back:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-0.1rem);
+}
+
+.projects-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  .projects-page {
+    padding-inline: 2rem;
+  }
+
+  .projects-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-page__header {
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto;
+
+    align-items: end;
+  }
+
+  .projects-page__back {
+    justify-self: end;
+  }
+}
+
+@media (min-width: 1180px) {
+  .projects-page {
+    padding-inline: 3rem;
+  }
+
+  .projects-page__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

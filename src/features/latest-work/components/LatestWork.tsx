@@ -5,6 +5,7 @@ import { latestProjects } from "../data/projects.data";
 import ProjectCard from "./ProjectCard";
 
 import "../styles/LatestWork.css";
+import { Link } from "react-router-dom";
 
 const LatestWork = () => {
   return (
@@ -36,6 +37,10 @@ const LatestWork = () => {
           >
             View more on GitHub
           </a>
+
+          <Link to="/projects" className="latest-work__all-projects">
+            View all projects
+          </Link>
         </div>
       </div>
     </section>

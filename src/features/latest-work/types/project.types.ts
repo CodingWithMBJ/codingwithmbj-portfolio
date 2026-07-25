@@ -1,5 +1,7 @@
 export type ProjectType = "Frontend" | "Backend" | "Full-Stack";
 
+export type ProjectStatus = "Completed" | "In Development";
+
 export interface Project {
   id: string;
   slug: string;
@@ -13,4 +15,5 @@ export interface Project {
   githubLink?: string;
   liveLink?: string;
   featured?: boolean;
+  status?: ProjectStatus;
 }
