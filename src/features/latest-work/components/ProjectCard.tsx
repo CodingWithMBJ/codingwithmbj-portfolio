@@ -28,26 +28,28 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
 
       <div className="project-card__content">
-        <div className="project-card__meta">
-          <span>{project.category}</span>
-          <span aria-hidden="true">•</span>
-          <time>{project.date}</time>
+        <div className="project-card__content-header">
+          <div className="project-card__meta">
+            <span>{project.category}</span>
+            <span aria-hidden="true">•</span>
+            <time>{project.date}</time>
+          </div>
+
+          <h3 className="project-card__title">{project.title}</h3>
+
+          <p className="project-card__description">{project.description}</p>
+
+          <ul
+            className="project-card__stack"
+            aria-label={`${project.title} technologies`}
+          >
+            {project.techStack.map((technology) => (
+              <li key={technology} className="project-card__technology">
+                {technology}
+              </li>
+            ))}
+          </ul>
         </div>
-
-        <h3 className="project-card__title">{project.title}</h3>
-
-        <p className="project-card__description">{project.description}</p>
-
-        <ul
-          className="project-card__stack"
-          aria-label={`${project.title} technologies`}
-        >
-          {project.techStack.map((technology) => (
-            <li key={technology} className="project-card__technology">
-              {technology}
-            </li>
-          ))}
-        </ul>
 
         <div className="project-card__actions">
           {project.liveLink && (

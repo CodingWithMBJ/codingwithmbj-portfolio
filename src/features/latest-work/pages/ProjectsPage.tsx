@@ -13,7 +13,7 @@ const ProjectsPage = () => {
           <div className="projects-page__heading">
             <p className="projects-page__eyebrow">Portfolio</p>
 
-            <h1 className="projects-page__title">All projects</h1>
+            <h1 className="projects-page__title">All Projects</h1>
 
             <p className="projects-page__description">
               A collection of frontend, backend, and full-stack applications I

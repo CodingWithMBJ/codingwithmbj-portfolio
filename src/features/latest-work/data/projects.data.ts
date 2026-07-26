@@ -1,4 +1,7 @@
 import type { Project } from "../types/project.types";
+import ecommerceTsx from "@/assets/images/projects/ecommerceTSXfirebase.png";
+import noteKeeper from "@/assets/images/projects/noteKeeper.png";
+import taskManager from "@/assets/images/projects/task-manager-firebase.png";
 
 export const projects: Project[] = [
   {
@@ -19,7 +22,21 @@ export const projects: Project[] = [
       "FastAPI",
       "PostgreSQL",
     ],
-    // githubLink: "https://github.com/Coding-Temple-Tech-Residency/FinSight-B",
+
+    featured: true,
+  },
+  {
+    id: "note-keeper",
+    slug: "note-keeper",
+    title: "My note Keeper",
+    type: "Frontend",
+    category: "Productivity",
+    date: "2026",
+    description:
+      "A note taking app that allows you to capture your everything thought if you could.",
+    image: noteKeeper,
+    techStack: ["React", "TypeScript"],
+    githubLink: "https://github.com/CodingWithMBJ/my-note-keeper",
     featured: true,
   },
   {
@@ -52,7 +69,7 @@ export const projects: Project[] = [
     date: "2025",
     description:
       "A responsive e-commerce application with Firebase integration, authentication, product queries, cart state, and component testing.",
-    image: "/images/projects/ecommerce.png",
+    image: ecommerceTsx,
     techStack: [
       "React",
       "TypeScript",
@@ -74,7 +91,7 @@ export const projects: Project[] = [
     date: "",
     description:
       "A task management application with real-time task creation, editing, and deletion, Firebase authentication, persistent cloud storage, and responsive workflows.",
-    image: "/images/projects/task-manager.png",
+    image: taskManager,
     techStack: [
       "React",
       "TypeScript",
