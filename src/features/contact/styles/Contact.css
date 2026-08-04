@@ -36,8 +36,8 @@
   justify-content: center;
   border: 1px solid var(--color-accent);
   border-radius: var(--radius-md);
-  background: var(--color-accent);
-  color: var(--color-background);
+  color: var(--button-primary-text);
+  background: var(--button-primary-bg);
   font-weight: 700;
   text-decoration: none;
   transition:

@@ -1,17 +1,16 @@
 html {
   background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
   transition:
-    background-color var(--transition-theme),
-    color var(--transition-theme);
+    color var(--transition-theme),
+    background-color var(--transition-theme);
 }
 
 body {
-  background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
   transition:
-    background-color var(--transition-theme),
-    color var(--transition-theme);
+    color var(--transition-theme),
+    background-color var(--transition-theme);
 }
 
 #root {
@@ -19,6 +18,6 @@ body {
 }
 
 ::selection {
-  background: var(--color-accent);
-  color: var(--color-accent-text);
+  color: var(--color-selection-text);
+  background: var(--color-selection-bg);
 }
