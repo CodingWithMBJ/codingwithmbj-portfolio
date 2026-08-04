@@ -4,8 +4,16 @@ import ProjectCard from "../components/ProjectCard";
 import { allProjects } from "../data/projects.data";
 
 import "../styles/ProjectsPage.css";
+import { useEffect } from "react";
 
 const ProjectsPage = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, []);
   return (
     <main className="projects-page">
       <div className="projects-page__container">
