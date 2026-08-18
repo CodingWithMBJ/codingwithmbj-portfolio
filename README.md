@@ -337,7 +337,7 @@ git clone https://github.com/CodingWithMBJ/codingwithmbj-portfolio
 ### Navigate to the Project
 
 ```bash
-cd codingwithmbj
+cd codingwithmbj-portfolio
 ```
 
 ### Install Dependencies
