@@ -2,8 +2,30 @@ import type { Project } from "../types/project.types";
 import ecommerceTsx from "@/assets/images/projects/ecommerceTSXfirebase.png";
 import noteKeeper from "@/assets/images/projects/noteKeeper.png";
 import taskManager from "@/assets/images/projects/task-manager-firebase.png";
+import maj from "@/assets/images/projects/maj-shot.png";
 
 export const projects: Project[] = [
+  {
+    id: "maj",
+    slug: "maj",
+    title: "MAJ Landing Page",
+    type: "Frontend",
+    category: "General Maintenance",
+    date: "2026",
+    description:
+      "Landing Page for MAJ General Maintenance, a company that provides dependable services for homes and businesses.",
+    image: maj,
+    techStack: [
+      "React",
+      "TypeScript",
+      "EmailJS",
+      "lucide-React",
+      "TailwindCSS",
+    ],
+    liveLink: "https://maj-general-maintenance-three.vercel.app/",
+    githubLink: "https://github.com/CodingWithMBJ/MAJ-General-Maintenance",
+    featured: true,
+  },
   {
     id: "finsight",
     slug: "finsight",
